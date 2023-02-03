@@ -319,8 +319,6 @@ class S3 extends DataObject
      */
     public function getAllParams(array $headers = [])
     {
-        $headers['ACL'] = 'public-read';
-
         $metadata = $this->getMetadata();
         if (count($metadata) > 0) {
             $headers['Metadata'] = $metadata;
